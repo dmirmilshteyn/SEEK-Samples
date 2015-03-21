@@ -1,3 +1,6 @@
+// Note: Make sure the following pins are plugged into a PWM pin
+// These are marked with a ~ beside the pin number
+
 int pinA1A = 9; // Pin A1A on the motor driver
 int pinA1B = 10; // Pin A1B on the motor driver
 int pinB1A = 11; // Pin B1A on the motor driver
@@ -14,35 +17,35 @@ void setup()
 void loop()
 {
   // put your main code here, to run repeatedly:
-  
+
 }
 
 void moveMotorAForward(int motorSpeed)
 {
   // Speed can range from 0 (slow) to 255 (fastest)
     analogWrite(pinA1A, motorSpeed);
-    analogWrite(pinA1B, 0); 
+    analogWrite(pinA1B, 0);
 }
 
 void moveMotorBForward(int motorSpeed)
 {
   // Speed can range from 0 (slow) to 255 (fastest)
   analogWrite(pinB1A, motorSpeed);
-  analogWrite(pinB1B, 0); 
+  analogWrite(pinB1B, 0);
 }
 
 void moveMotorABackward(int motorSpeed)
 {
   // Speed can range from 0 (slow) to 255 (fastest)
     analogWrite(pinA1A, 0);
-    analogWrite(pinA1B, motorSpeed); 
+    analogWrite(pinA1B, motorSpeed);
 }
 
 void moveMotorBBackward(int motorSpeed)
 {
   // Speed can range from 0 (slow) to 255 (fastest)
   analogWrite(pinB1A, 0);
-  analogWrite(pinB1B, motorSpeed); 
+  analogWrite(pinB1B, motorSpeed);
 }
 
 void stopMotorA()
@@ -51,7 +54,7 @@ void stopMotorA()
   analogWrite(pinA1B, 0);
 }
 
-void stopMotorB() 
+void stopMotorB()
 {
   analogWrite(pinA1A, 0);
   analogWrite(pinA1B, 0);
